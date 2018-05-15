@@ -1,0 +1,11 @@
+.nav-username{
+  margin-left: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0,0,0, 0.3);
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.user-profile-btn{
+  line-height: normal !important;
+  width: 200px !important;
+}

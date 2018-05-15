@@ -1,0 +1,21 @@
+.breadcrumb{
+  padding: 0 !important;
+  background: none !important;
+}
+  .breadcrumb a {
+    color: rgb(56, 143, 233);
+
+  }
+    .breadcrumb a:hover{
+      color: red;
+      text-decoration: none;
+    }
+  .breadcrumb-item{
+    text-transform: capitalize;
+  }
+  .breadcrumb-item.active{
+    color: #ADADAD !important;
+  }
+  .breadcrumb-item + .breadcrumb-item::before{
+    color: #C4C4C4 !important;
+  }

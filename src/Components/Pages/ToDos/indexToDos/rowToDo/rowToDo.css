@@ -1,0 +1,39 @@
+.username-with-avatar{
+  display: block;
+  text-align: left;
+  color: #636c72;
+  text-transform: capitalize;
+  max-width: 160px;
+  display: block;
+  overflow: hidden;
+}
+  .username-with-avatar:hover{
+    color: #FF5A5F;
+    text-decoration: none;
+  }
+.user-todo{
+  font-size: 11px;
+  display: block;
+  float: left;
+  color: red;
+  text-transform: capitalize;
+}
+.user-todo[data-value="owner"]{
+  color: #FF5A5F;
+}
+.user-todo[data-value="normal"]{
+  color: #5094E8;
+}
+.user-todo[data-value="Member"]{
+  color: #5bc0de;
+}
+.user-avatar{
+  float: left;
+  margin-right: 10px;
+}
+a:hover{
+  text-decoration: none !important;
+}
+.remove-capitalization{
+  text-transform: none !important;
+}

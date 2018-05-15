@@ -1,0 +1,28 @@
+.navbar{
+  padding: 4px 10px !important;
+}
+.navbar-light .navbar-nav .active > .nav-link{
+  color: #fff !important;
+  text-shadow: 1px 1px 0 rgba(0,0,0, 0.3)
+}
+.bg-faded{
+  background: rgb(56, 143, 233) !important; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right,#388fe9 0,#a9c2dc 100%) !important;
+    background-repeat: repeat-x !important;
+
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.3);
+}
+.nav-item a{
+  color: #852239 !important;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  padding: 10px 10px;
+  display: block;
+}
+.nav-item a.active{
+  color: #fff !important;
+}
+  .nav-item a:hover{
+    text-decoration: none;
+    color: #f1f1f1 !important;
+  }

@@ -1,0 +1,23 @@
+.permission-item{
+  display: inline-block !important;
+  width: auto !important;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+  .permission-item label{
+    color: #ccc !important;
+  }
+  .permission-item svg{
+    fill: #ccc !important;
+  }
+.permission-item.active label{
+  color: red !important;
+}
+.permission-item.active svg{
+  fill: red !important;
+}
+
+
+.add-todo .form-field{
+  padding: 10px 0;
+}

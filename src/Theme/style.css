@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+html{
+  height: 88%;
+}
+html, a{
+  font-family: 'Arimo', sans-serif;
+}
+a:hover{
+  text-decoration: none !important;
+}
+body{
+  height: 100%;
+  background: #e6e6e6 !important;
+}
+h2{
+  color: rgb(56, 143, 233) !important;
+}
+#root, body{
+  height: 100%;
+}
+html{
+  margin-top: 58px;
+  height: 92%;
+}
+.done-icon{
+  color: red !important;
+}
+.clear-icon, .deleted-icon{
+  color: #f35071 !important;
+}
+
+.not-deleted-icon{
+  color: #ccc !important;
+}
+.test{
+  height: 100px;
+  background: red;
+}
+
+
+
+
+
+.modal-enter {
+  margin-top: -100px;
+  opacity: 0.1;
+}
+
+
+.modal-leave.modal-leave-active {
+  margin-top: -1000px;
+  opacity: 0.1;
+  transition: top 300ms ease-in;
+}
+.modal-appear{
+  margin-top: -100px;
+  opacity: 0.1;
+  top: -100;
+}
+
+.modal-appear.modal-appear-active {
+  margin-top: 0;
+  opacity: 1;
+  margin-top: 0px;
+  transition:  .3s ease all;
+}
+
+.modal-leave {
+  margin-top: -100px;
+  opacity: 0.1;
+}
+
+.modal-leave.modal-leave-active {
+  margin-top: -100px;
+  opacity: 0.1;
+  transition: opacity 300ms ease-in;
+}
+
+
+
+
+
+.example-enter {
+  opacity: 0.01;
+}
+
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.example-appear{
+  margin-top: -10px;
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  margin-top: 0;
+  opacity: 1;
+  transition:  .4s ease-in all;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.page-container{
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #DEDEDE;
+  position: relative;
+  min-height: 100px;
+}
+.units-container{
+  padding: 0;
+  margin-bottom: 20px;
+}
+.form-field{
+  padding: 20px 0;
+  position: relative;
+}
+  .hidden-input{
+    position: absolute;
+    height: 0;
+    bottom: 25px;
+    border: 0;
+    width: 100%;
+    font-size: 0;
+  }
+.single-page-content{
+  margin-top: 50px;
+}
+  .single-page-content .page-title{
+    color: #fe6979;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+.MenuItemBtn:hover{
+  text-decoration: none;
+}
+.table-hoverd {
+  border: 1px solid #EBEBEB;
+}
+.table-hoverd td{
+  text-transform: capitalize;
+  font-size: 13px;
+  border-color: #EBEBEB !important;
+}
+  .table-hoverd td:first-child{
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    background: #f1f1f1;
+    border-right: 1px solid #EBEBEB;
+    max-width: 50px !important
+  }
+.table-hoverd tr:hover td{
+  background: rgba(51,195,179,.2);
+}
+.form-field label{
+  display: block;
+  color: #b7b7c7;
+}
+.popup-modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.4);
+  top: 0;
+  z-index: 2000;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-modal .modal-content{
+  padding: 50px;
+  background: #fff;
+  min-width: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tabs > div {
+  background: none !important;
+}
+  .tabs .tab-icon{
+    color: #636c72 !important;
+    fill: #636c72 !important;
+  }
+  .tabs button{
+    color: #636c72 !important;
+  }
+.tabs > div:nth-child(2) > div{
+  background-color: rgb(56, 143, 233) !important;
+}
+.tab-content{
+  margin-top: 20px;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
