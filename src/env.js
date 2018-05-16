@@ -1,11 +1,13 @@
 // API URLs related to evn
 const env = {
   development: 'http://localhost:3000',
+  production : 'https://rails-to-do-list-narola.herokuapp.com'
 }
 
 // hosts that will use this App
 let hosts = {
  development: ['localhost'],
+ production: ['react-to-do-list-narola.herokuapp.com'] 
 }
 
 const hostname = window.location.hostname
