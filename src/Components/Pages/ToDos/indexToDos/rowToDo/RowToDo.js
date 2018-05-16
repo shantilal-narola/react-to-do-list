@@ -13,6 +13,7 @@ import ModeEditIcon       from 'material-ui/svg-icons/editor/mode-edit';
 import MoreVertIcon       from 'material-ui/svg-icons/navigation/more-vert';
 import dateFormat         from 'dateformat';
 import RemoveRedEyeIcon   from 'material-ui/svg-icons/image/remove-red-eye';
+import Toggle from 'material-ui/Toggle';
 
 // Style
 import './rowToDo.css'
@@ -20,7 +21,7 @@ import './rowToDo.css'
 import { CSSTransitionGroup } from 'react-transition-group'
 
 const RowToDo = (props) => {
-  const {todo, onDelete} = props
+  const {todo, onDelete, onToggle} = props
   return (
     <CSSTransitionGroup
       component="tr"
@@ -34,6 +35,12 @@ transitionLeave={false}>
       <td>{todo.data}</td>
       <td>{dateFormat(new Date(todo.due_date),'ddd, d mmm yyyy h:MM TT')}</td>
       <td>{todo.priority}</td>
+      <td>
+        <Toggle
+          defaultToggled={todo.is_completed}
+          onToggle={() => onToggle(todo.id)}
+          />
+      </td>
 
       {/* Action */}
       <td>
@@ -47,7 +54,7 @@ transitionLeave={false}>
           <MenuItem primaryText="Edit" leftIcon={<ModeEditIcon />} />
         </Link>
 
-        <MenuItem primaryText="Delete" leftIcon={<DeleteIcon />} onClick={() => onDelete(todo.id)} />
+        <MenuItem primaryText="Delete" leftIcon={<DeleteIcon />} onClick={(e) => onDelete(todo.id)} />
 
         </IconMenu>
       </td>

@@ -93,7 +93,6 @@ export function deleteToDo(todoid){
       })
     })
   }
-
 }
 
 /*
@@ -112,6 +111,27 @@ export function editToDo(todoid, data){
   return {
     type: 'EDIT_TODO',
     payload: handleAPI(url, method, data, Authorization)
+  }
+
+}
+
+
+/*
+*   IsCompleted ToDo
+*
+*   @todoid: (Intger)
+*   @data: fromData
+*/
+export function isCompleted(todoid){
+
+  const url           = '/'+API_VERSION+'/todos/'+todoid+'/is_completed'
+  const method        = 'PUT'
+  const locale        = localStorage.getItem('LOCALE')
+  const Authorization = {'access-token':sessionStorage.getItem('TOKEN')}
+
+  return {
+    type: 'ISCOMPLETED_TODO',
+    payload: handleAPI(url, method, false, Authorization)
   }
 
 }

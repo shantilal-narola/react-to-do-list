@@ -12,6 +12,7 @@ import swal from 'sweetalert'
 import {
   getToDos,
   deleteToDo,
+  isCompleted
   } from '../../../../Redux/actions/todosActions'
 
 import {deleteItem} from '../../../../Utilities/functions'
@@ -42,11 +43,12 @@ class IndexToDos extends Component{
       comID: 'ToDos',
       currentPage: 1,
       showToDos: 10,
-      sort_by: 'name',
+      sort_by: 'id',
       sort_direction: 'desc',
     }
     this.handlePagination   = this.handlePagination.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
+    this.hanldeIsCompleted = this.hanldeIsCompleted.bind(this)
     this.handleSorting = this.handleSorting.bind(this)
     this.setSession = this.setSession.bind(this)
     this.getSession = this.getSession.bind(this)
@@ -125,6 +127,18 @@ class IndexToDos extends Component{
     })
   }
 
+
+  /***************************
+  * On Click hanldeIsCompleted
+  ****************************/
+  hanldeIsCompleted(ToDoid){
+
+    const {dispatch} = this.props
+
+    dispatch(isCompleted(ToDoid))
+
+  }
+
   /***************************
   * On Click Pagination
   ****************************/
@@ -184,6 +198,7 @@ class IndexToDos extends Component{
       {params: 'data', title: 'Data'},
       {params: 'due_date', title: 'Due Date'},
       {params: 'priority', title: 'Priority'},
+      {params: 'is_completed', title: 'Complete'},
     ]
     // store data
     const {ToDos, fetching, errMsg, totalToDos } = this.props
@@ -233,6 +248,7 @@ class IndexToDos extends Component{
                               key={'todo-'+todo.id}
                               todo={todo}
                               onDelete={this.handleDelete}
+                              onToggle={this.hanldeIsCompleted}
                               />)
                 })
               )
