@@ -58,7 +58,7 @@ class Registration extends Component{
 
       <RegistrationContainer title="Registration">
 
-        {succMsg && <Redirect to="/" />}
+        {succMsg && <Redirect to="/login" />}
 
         {/* Loading */}
         {fetching && <Loading />}
